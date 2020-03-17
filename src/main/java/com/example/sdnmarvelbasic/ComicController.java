@@ -15,12 +15,12 @@ public class ComicController {
     }
 
     @GetMapping
-    public Iterable<ComicIssue> findAll() {
+    public Iterable<Comic> findAll() {
         return comicRepo.findAll();
     }
 
-    @GetMapping("/{name}")
-    public ComicIssue getComicByName(@PathVariable String name) {
-        return comicRepo.getComicIssueByName(name);
+    @GetMapping("/{title}")
+    public Comic getComicByName(@PathVariable String title) {
+        return comicRepo.getComicByTitle(title);
     }
 }

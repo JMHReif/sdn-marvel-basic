@@ -21,6 +21,6 @@ public class CharacterController {
 
     @GetMapping("/{name}")
     public Character getCharacterByName(@PathVariable String name) {
-        return characterRepo.getComicCharacterByName(name);
+        return characterRepo.getCharacterByName(name);
     }
 }
