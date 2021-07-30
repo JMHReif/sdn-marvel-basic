@@ -1,15 +1,15 @@
 package com.example.sdnmarvelbasic;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.neo4j.ogm.annotation.GeneratedValue;
-import org.neo4j.ogm.annotation.Id;
-import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Relationship;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Relationship;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@NodeEntity
+@Node
 public class ComicIssue {
     @Id
     @GeneratedValue
@@ -41,39 +41,19 @@ public class ComicIssue {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getThumbnail() {
         return thumbnail;
-    }
-
-    public void setThumbnail(String thumbnail) {
-        this.thumbnail = thumbnail;
     }
 
     public Integer getPageCount() {
         return pageCount;
     }
 
-    public void setPageCount(Integer pageCount) {
-        this.pageCount = pageCount;
-    }
-
     public Double getIssueNumber() {
         return issueNumber;
     }
 
-    public void setIssueNumber(Double issueNumber) {
-        this.issueNumber = issueNumber;
-    }
-
     public List<Character> getCharacters() {
         return characters;
-    }
-
-    public void setCharacters(List<Character> characters) {
-        this.characters = characters;
     }
 }

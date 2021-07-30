@@ -15,8 +15,8 @@ public class CharacterController {
     }
 
     @GetMapping
-    public Iterable<Character> findAll() {
-        return characterRepo.findAll();
+    public Iterable<Character> findAllCharacters() {
+        return characterRepo.findAllCharacters();
     }
 
     @GetMapping("/{name}")

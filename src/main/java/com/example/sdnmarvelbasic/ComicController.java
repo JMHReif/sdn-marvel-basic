@@ -15,8 +15,8 @@ public class ComicController {
     }
 
     @GetMapping
-    public Iterable<ComicIssue> findAll() {
-        return comicRepo.findAll();
+    public Iterable<ComicIssue> findAllComics() {
+        return comicRepo.findAllComics();
     }
 
     @GetMapping("/{name}")
